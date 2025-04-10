@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.rtl.min.css">
+    <link rel="icon" href="assets/pic/patoo-logo-header.webp" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+        integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Pet World</title>
+</head>
+
+<body>
+    <!--------------- Navbar --------------->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="d-flex">
+                <a href="index.html"><img class="img" src="assets/pic/patoo-logo-header.webp" alt="pet world"></a>
+                <a class="navbar-brand m-4 nv" href="index.html">دنیایی برای پت ها</a>
+            </div>
+            <div class="search-icons">
+                <div class="input-group inpt">
+                    <input class="form-control" id="inpt" type="text" placeholder="به دنبال چه چیزی هستید؟">
+                    <button class="btn btn-light batn" id="btn"><i class="bi bi-search"></i></button>
+                </div>
+                <div class="d-flex">
+                    <a href="#" class="icons"><i class="bi bi-person-fill"></i></a>
+                    <a href="#" class="icons"><i class="bi bi-cart3"></i></a>
+                </div>
+            </div>
+            <img src="assets/pic/moon.png" alt="dark-mood" class="dark_mood" id="moons" onclick="change_theme()">
+        </div>
+    </nav>
+    <!-- Offcanvas Sidebar -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">منو</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item"><a class="nav-link text-black" href="#"><i style="font-size:24px"
+                            class="fa">&#xf015;</i>صفحه اصلی</a></li>
+                <li class="nav-item"><a class="nav-link text-black" href="#"><i style="font-size:24px"
+                            class="fa">&#xf0f0;</i>دکتر ها</a></li>
+                <li class="nav-item"><a class="nav-link text-black" href="#"><i style="font-size:24px"
+                            class="fa">&#xf233;</i>خدمات</a></li>
+                <li class="nav-item"><a class="nav-link text-black" href="#"><i style="font-size:24px"
+                            class="fa">&#xf290;</i>فروشگاه</a></li>
+            </ul>
+
+        </div>
+        <div class="offcanvas-body">
+            <h3 class="text-black"> <i class="bi bi-headset"></i>چت پشتیبانی</h3>
+            <div class="position-relative">
+                <input class="form-control" type="text" name="" id="" placeholder="ارتباط با پشتیبان...">
+                <button class="btn position-absolute end-0 iii"><i class="bi bi-send"></i>ارسال</button>
+            </div>
+
+            <div class="mt-5 d-flex justify-content-around">
+                <h3 class="ii d-block bi bi-telegram text-primary"></h3>
+                <h3 class="ii d-block bi bi-instagram text-danger"></h3>
+                <h3 class="ii d-block bi bi-whatsapp text-success"></h3>
+            </div>
+        </div>
+        <img src="assets/pic/moon.png" alt="dark-mood" class="dark_mood-cn" id="moon" onclick="change_theme()">
+    </div>
+
+    <!-- ------------------------------menu desktop------------------- -->
+    <div class="menu_desktop">
+        <div>
+            <ul class="d-flex justify-content-around list-unstyled">
+                <li><a class="menu_a" href="#">صفحه اصلی</a></li>
+                <li><a class="menu_a" href="#">دکتر ها</a></li>
+                <li><a class="menu_a" href="#">خدمات</a></li>
+                <li><a class="menu_a" href="#">فروشگاه</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--------------------------- Slider ----------------------------->
+    <section class="py-1 col-12 col-md-12">
+        <div class="carousel slide carousel-fade" id="slider" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div data-bs-interval="3000" class="carousel-item active">
+                    <img class="w-100" src="assets/pic/slider1.jpeg" alt="slider">
+                </div>
+                <div data-bs-interval="2000" class="carousel-item">
+                    <img class="w-100" src="assets/pic/slider222.jpg" alt="slider">
+                </div>
+                <div data-bs-interval="2000" class="carousel-item">
+                    <img class="w-100" src="assets/pic/slider3.png" alt="slider">
+                </div>
+                <!-- <div data-bs-interval="2000" class="carousel-item">
+                    <img class="w-100" src="assets/img/slider/s-04.jpg" alt="slider">
+                </div> -->
+            </div>
+            <div class="carousel-indicators">
+                <button data-bs-target="#slider" data-bs-slide-to="0" class="active"></button>
+                <button data-bs-target="#slider" data-bs-slide-to="1"></button>
+                <button data-bs-target="#slider" data-bs-slide-to="2"></button>
+                <!-- <button data-bs-target="#slider" data-bs-slide-to="3"></button> -->
+            </div>
+            <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#slider">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#slider">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
+    <!-- ----------------------------------------------------------------- -->
+
+
+    <!-- Cards Section -->
+    <div class="container">
+        <div class="d1">
+            <div class="d2">
+                <div class="d3">
+                    <div class="imgd3">
+                        <img src="assets/pic/Our-Mission.jpg" alt="Our Mission">
+                    </div>
+                    <div class="content">
+                        <h5>ماموریت ما</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="d2">
+                <div class="d3">
+                    <div class="imgd3">
+                        <img src="assets/pic/Our-Doctors.jpg" alt="Our Doctors">
+                    </div>
+                    <div class="content">
+                        <h5>دکتر ها</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="d2">
+                <div class="d3">
+                    <div class="imgd3">
+                        <img src="assets/pic/Careers.jpg" alt="Careers">
+                    </div>
+                    <div class="content">
+                        <h5>فروشگاه</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="d2">
+                <div class="d3">
+                    <div class="imgd3">
+                        <img src="assets/pic/Surgery1.jpg" alt="surgery">
+                    </div>
+                    <div class="content">
+                        <h5>عمل های جراحی</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -----------------دسته بندی خرید------------------- -->
+    <div class="container py-4">
+        <div class="d-flex" style="color: purple;">
+            <i style="font-size:24px;" class="fa pe-2">&#xf1b0;</i>
+            <h5 class="fw-bold mb-3 text-start">امروز برای کدام حیوان خرید می‌کنید؟</h5>
+        </div>
+
+        <div class="d-flex overflow-auto gap-3 pb-2">
+            <a href="#" class="text-center category-link">
+                <div class="circle-placeholder"><img class="img_buy" src="assets/pic/happo.avif" alt="سگ"></div>
+                <small class="d-block my-2">سگ</small>
+            </a>
+            <a href="#" class="text-center category-link">
+                <div class="circle-placeholder"><img class="img_buy" src="assets/pic/pishi.avif" alt="گربه"></div>
+                <small class="d-block mt-2">گربه</small>
+            </a>
+            <a href="#" class="text-center category-link">
+                <div class="circle-placeholder"><img class="img_buy" src="assets/pic/asb.avif" alt="اسب"></div>
+                <small class="d-block mt-2">اسب</small>
+            </a>
+            <a href="#" class="text-center category-link">
+                <div class="circle-placeholder"><img class="img_buy" src="assets/pic/parande.avif" alt="پرنده"></div>
+                <small class="d-block mt-2">پرنده</small>
+            </a>
+            <a href="#" class="text-center category-link">
+                <div class="circle-placeholder"><img class="img_buy" src="assets/pic/morgh.avif" alt="مرغ"></div>
+                <small class="d-block mt-2">مرغ</small>
+            </a>
+            <a href="#" class="text-center category-link">
+                <div class="circle-placeholder"><img class="img_buy" src="assets/pic/wild life.avif" alt="حیات وحش">
+                </div>
+                <small class="d-block mt-2">حیات وحش</small>
+            </a>
+            <a href="#" class="text-center category-link">
+                <div class="circle-placeholder"><img class="img_buy" src="assets/pic/parrot.avif" alt="طوطیسانان"></div>
+                <small class="d-block mt-2">طوطیسانان</small>
+            </a>
+            <a href="#" class="text-center category-link">
+                <div class="circle-placeholder"><img class="img_buy" src="assets/pic/small.avif" alt="ریز جثه ها"></div>
+                <small class="d-block mt-2">ریز جثه ها</small>
+            </a>
+            <a href="#" class="text-center category-link">
+                <div class="circle-placeholder"><img class="img_buy" src="assets/pic/farm.avif" alt="حیوانات مزرعه">
+                </div>
+                <small class="d-block mt-2">حیوانات مزرعه</small>
+            </a>
+            <a href="#" class="text-center category-link">
+                <div class="circle-placeholder"><img class="img_buy" src="assets/pic/reptile.avif" alt="خزندگان"></div>
+                <small class="d-block mt-2">خزندگان</small>
+            </a>
+            <a href="#" class="text-center category-link">
+                <div class="circle-placeholder"><img class="img_buy" src="assets/pic/fish.avif" alt="ماهی ها"></div>
+                <small class="d-block mt-2">ماهی ها</small>
+            </a>
+        </div>
+    </div>
+    <!-- -------ساعات کاری-------- -->
+    <div class="container mt-2 p-4 asli">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-5 rounded shadow-lg me-2 mb-5 mb-sm-0 mt-4">
+                <h5 class="text-center mt-4">ساعات کاری:</h5>
+                <table class="table table-bordered mt-5">
+                    <thead>
+                        <tr>
+                            <th>روز</th>
+                            <th>ساعات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>شنبه</td>
+                            <td>9:00 - 18:00</td>
+                        </tr>
+                        <tr>
+                            <td>یک‌شنبه</td>
+                            <td>9:00 - 18:00</td>
+                        </tr>
+                        <tr>
+                            <td>دوشنبه</td>
+                            <td>9:00 - 18:00</td>
+                        </tr>
+                        <tr>
+                            <td>سه‌شنبه</td>
+                            <td>9:00 - 18:00</td>
+                        </tr>
+                        <tr>
+                            <td>چهارشنبه</td>
+                            <td>9:00 - 18:00</td>
+                        </tr>
+                        <tr>
+                            <td>پنج‌شنبه</td>
+                            <td>9:00 - 15:00</td>
+                        </tr>
+                        <tr>
+                            <td>جمعه</td>
+                            <td>تعطیل</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-5 p-4 rounded shadow-lg mt-4">
+                <h5 class="text-center">نحوه رزرو وقت:</h5>
+                <div class="mt-4">
+                    <h6>رزرو آنلاین:</h6>
+                    <form action="#" method="POST">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">نام و نام خانوادگی</label>
+                            <input type="text" class="form-control" id="name"
+                                placeholder="نام و نام خانوادگی خود را وارد کنید" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">شماره تلفن همراه</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="شماره تلفن خود را وارد کنید"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="date" class="form-label">تاریخ و ساعت رزرو</label>
+                            <input type="datetime-local" class="form-control" id="date" required>
+                        </div>
+                        <button type="submit" class="btn btn-purple w-100">رزرو آنلاین</button>
+                    </form>
+                </div>
+
+                <div class="mt-4">
+                    <h6>رزرو تلفنی:</h6>
+                    <p>برای رزرو تلفنی، می‌توانید با شماره <strong>+9821112233</strong> تماس بگیرید.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--------------------- بخشی از خدمات ما --------------------------->
+    <div class="container rounded-container mt-3">
+        <h4 class="text-center mb-4">بخشی از خدمات ما</h4>
+        <div class="row justify-content-between mb-3">
+            <div class="col-md-4 col-sm-6 d-flex justify-content-center mb-2">
+                <a href="#" class="text-decoration-none">
+                    <div class="service-box">
+                        <div class="service-img">
+                            <img class="dent w-100" src="assets/pic/dentistt.png" alt="دندانپزشکی">
+                        </div>
+                        <div class="service-title">دندانپزشکی</div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-4 col-sm-6 d-flex justify-content-center mb-2">
+                <a href="#" class="text-decoration-none">
+                    <div class="service-box">
+                        <div class="service-img">
+                            <img class="dent w-100" src="assets/pic/plant.png" alt="گیاهان و حیوانات">
+                        </div>
+                        <div class="service-title">گیاهان و حیوانات</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6 d-flex justify-content-center mb-2">
+                <a href="#" class="text-decoration-none">
+                    <div class="service-box">
+                        <div class="service-img">
+                            <img class="dent w-100" src="assets/pic/animal laboratory.png" alt="آزمایشگاه">
+                        </div>
+                        <div class="service-title">آزمایشگاه</div>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="col-md-4 col-sm-6 d-flex justify-content-center mb-2">
+                <a href="#" class="text-decoration-none">
+                    <div class="service-box">
+                        <div class="service-img">
+                            <img class="dent w-100" src="assets/pic/an elephant.png" alt="حیوانات عظیم الجثه">
+                        </div>
+                        <div class="service-title">حیوانات عظیم الجثه</div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-4 col-sm-6 d-flex justify-content-center mb-2">
+                <a href="#" class="text-decoration-none">
+                    <div class="service-box">
+                        <div class="service-img">
+                            <img class="dent w-100" src="assets/pic/cat surgery.png" alt="انواع عمل‌ها">
+                        </div>
+                        <div class="service-title">انواع عمل‌ها</div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-4 col-sm-6 d-flex justify-content-center mb-2">
+                <a href="#" class="text-decoration-none">
+                    <div class="service-box">
+                        <div class="service-img">
+                            <img class="dent w-100" src="assets/pic/clinic.png" alt="سلامت و پیشگیری">
+                        </div>
+                        <div class="service-title">سلامت و پیشگیری</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!---------------------- تبلیغ قروشگاه ------------------->
+    <div class="container mt-4">
+        <div class="d-flex egg">
+            <i class="bi bi-egg-fried mt-1 me-2 fs-5"></i>
+            <h4>محبوب ترین غذا ها </h4>
+        </div>
+        <div class="d-flex mt-2 box">
+            <div class="d_food_img text-center">
+                <img src="assets/pic/dog_food.avif" alt="غذای سگ ها" class="food_img">
+                <p class="mt-2 txt_food">غذای سگ ها</p>
+            </div>
+            <div class="d_food_img text-center">
+                <img src="assets/pic/cat_food.avif" alt="غذای گربه ها" class="food_img">
+                <p class="mt-2 txt_food">غذای گربه ها</p>
+            </div>
+            <div class="d_food_img text-center">
+                <img src="assets/pic/dog_treat.avif" alt="تشویقی سگ ها" class="food_img">
+                <p class="mt-2 txt_food">تشویقی سگ ها</p>
+            </div>
+            <div class="d_food_img text-center">
+                <img src="assets/pic/cat_litter.avif" alt="خاک گربه ها" class="food_img">
+                <p class="mt-2 txt_food">خاک گربه ها</p>
+            </div>
+            <div class="d_food_img text-center">
+                <img src="assets/pic/toy.avif" alt="اسباب بازی" class="food_img">
+                <p class="mt-2 txt_food">انواع اسباب بازی ها</p>
+            </div>
+            <div class="d_food_img text-center">
+                <img src="assets/pic/leash.png" alt="قلاده" class="food_img">
+                <p class="mt-2 txt_food">انواع قلاده ها</p>
+            </div>
+        </div>
+        <div class="btn_shop">
+            <a class="btn btn-purple fw-bold">برای بازدید از فروشگاه کلیک کنید</a>
+        </div>
+        
+    </div>
+    
+
+    <script src="index.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
