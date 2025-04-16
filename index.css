@@ -3,6 +3,11 @@
     --purple2: #d69ade;
     --purple3: #eabde6;
     --purple4: #ffdfef;
+    --purple5: #5e2d91;
+    --purple6: #a066c9;
+    --purple7: #8a42b9;
+    --white: #fff;
+    --soft-gray: #f4f4f4;
 }
 
 
@@ -374,11 +379,134 @@ a.category-link:hover .circle-placeholder {
     color: purple;
 }
 
-.btn_shop{
+.btn_shop {
     display: flex;
     justify-content: center;
     margin-top: 15px;
 }
+
+/* *********************اکانت پت******************* */
+
+.pet_account {
+    background-color: var(--purple3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    color: var(--white);
+}
+
+.account_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    background-color: var(--purple6);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.account_1 {
+    width: 50%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: var(--purple1);
+}
+
+.account_1 p {
+    margin-bottom: 0px;
+    line-height: 1.3;
+}
+
+.btn-purple1 {
+    background-color: var(--purple3) !important;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 70px;
+}
+
+
+.account_2 {
+    width: 50%;
+    background-image: url('assets/pic/account.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    
+}
+
+.icon_pic {
+    width: 70px;
+    height: 70px;
+    border-radius: 49%;
+    padding: 4px;
+    border: 3px solid var(--white);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.icon_pic:hover {
+    transform: scale(1.1);
+}
+
+
+/* --------------نظر ها ------------- */
+.comments {
+    background-image: url(assets/pic/animal.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    direction: rtl;
+    padding: 2rem;
+}
+
+.comment_h3{
+    text-shadow: rgb(124, 124, 124);
+}
+
+.comment-text {
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    font-weight: bold;
+    padding: 1rem 2rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* banner */
+.footer-help {
+    background-color: #8e44ad; /* رنگ بنفش اصلی */
+    font-family: 'Vazir', sans-serif; /* فونت دلخواه فارسی */
+    direction: rtl;
+}
+
+.footer-help .btn {
+    border: 2px solid white;
+    transition: all 0.3s ease;
+}
+
+.footer-help .btn:hover {
+    background-color: #732d91;
+    color: white;
+    border-color: white;
+}
+
+.text-purple {
+    color: #8e44ad !important;
+}
+
+
+
 
 /* Responsive Design */
 @media (max-width: 991px) {
@@ -421,7 +549,7 @@ a.category-link:hover .circle-placeholder {
         width: 48%;
     }
 
-     /* shop ads */
+    /* shop ads */
     .d_food_img {
         width: 30%;
     }
@@ -455,10 +583,26 @@ a.category-link:hover .circle-placeholder {
         flex-wrap: wrap;
         width: 100%;
     }
+
+    /* اکانت پت */
+    .account_wrapper {
+        flex-direction: column;
+    }
+
+    .account_1,
+    .account_2 {
+        width: 100%;
+    }
+
+    .account_2 {
+        height: 500px;
+    }
+    
 }
 
 @media (max-width: 550px) {
-     /* shop ads */
+
+    /* shop ads */
     .d_food_img {
         width: 40%;
     }
