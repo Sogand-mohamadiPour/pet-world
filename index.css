@@ -32,6 +32,7 @@ body {
     font-family: 'Sahel', sans-serif;
     direction: rtl;
     font-variant-numeric: arabic-indic;
+    overflow-x: hidden;
 }
 
 /* -----------[navbar]------------- */
@@ -55,10 +56,14 @@ body {
 
 .navbar a,
 .navbar-brand {
-    color: white !important;
+    color: white;
     font-family: sahel;
     font-size: 1.2rem;
 }
+
+/* .navv{
+    color: white;
+} */
 
 .img {
     width: 50px;
@@ -195,6 +200,16 @@ body {
     position: absolute;
     left: 0;
     bottom: 10px;
+}
+
+.dark_mood {
+    height: 48px;
+    width: 48px;
+}
+
+/* slider */
+.slider {
+    height: 385px;
 }
 
 
@@ -437,7 +452,7 @@ a.category-link:hover .circle-placeholder {
     background-size: cover;
     background-position: center;
     height: 500px;
-    
+
 }
 
 .icon_pic {
@@ -470,23 +485,26 @@ a.category-link:hover .circle-placeholder {
     padding: 2rem;
 }
 
-.comment_h3{
+.comment_h3 {
     text-shadow: rgb(124, 124, 124);
 }
 
 .comment-text {
     font-size: 1.5rem;
     color: white;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
     font-weight: bold;
     padding: 1rem 2rem;
     animation: fadeIn 2s ease-in-out;
 }
 
 /* banner */
+.banner{
+    width: 98%;
+    margin: auto;
+}
 .footer-help {
-    background-color: #8e44ad; /* رنگ بنفش اصلی */
-    font-family: 'Vazir', sans-serif; /* فونت دلخواه فارسی */
+    background-color: #8e44ad;
     direction: rtl;
 }
 
@@ -503,6 +521,45 @@ a.category-link:hover .circle-placeholder {
 
 .text-purple {
     color: #8e44ad !important;
+}
+
+
+/* footer */
+footer {
+    border-top: 5px solid #6822e944;
+    background: linear-gradient(to right, #6a1b9a, #8e24aa);
+    overflow-x: hidden;
+  }  
+
+.footer-link {
+    color: #f3e5f5;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #d1c4e9;
+    text-decoration: underline;
+}
+
+.social-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #ffffff22;
+    padding: 1px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    background-color: #ffffff44;
+}
+
+.app img {
+    display: block;
+    width: 150px;
+    height: 50px;
 }
 
 
@@ -539,6 +596,11 @@ a.category-link:hover .circle-placeholder {
         display: none;
     }
 
+    /* slider */
+    .slider {
+        height: 320px;
+    }
+
     /* cards */
     .card-container {
         display: flex;
@@ -573,6 +635,11 @@ a.category-link:hover .circle-placeholder {
         font-size: 32px;
     }
 
+    /* slider */
+    .slider {
+        height: 200px;
+    }
+
     /* cards */
     .d2 {
         width: 100%;
@@ -597,7 +664,7 @@ a.category-link:hover .circle-placeholder {
     .account_2 {
         height: 500px;
     }
-    
+
 }
 
 @media (max-width: 550px) {
@@ -610,6 +677,12 @@ a.category-link:hover .circle-placeholder {
 
 
 @media (max-width: 480px) {
+
+    /* slider */
+    .slider {
+        height: 150px;
+    }
+
     .img {
         width: 40px;
         height: 40px;
