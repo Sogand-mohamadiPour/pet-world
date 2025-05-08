@@ -31,9 +31,43 @@ body {
     background-color: #eac2eb;
     font-family: 'Sahel', sans-serif;
     direction: rtl;
-    font-variant-numeric: arabic-indic;
+    /* font-variant-numeric: arabic-indic; */
     overflow-x: hidden;
 }
+
+/* --------chat box---------- */
+.chat-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--purple1);
+    color: #ffffff;
+    max-width: 300px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--purple1);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .chat-icon:hover {
+    background-color: #59329d;
+  }
+  
 
 /* -----------[navbar]------------- */
 .navbar {
@@ -56,7 +90,7 @@ body {
 
 .navbar a,
 .navbar-brand {
-    color: white;
+    color: white !important;
     font-family: sahel;
     font-size: 1.2rem;
 }
@@ -116,6 +150,11 @@ body {
     margin-left: 15px;
     background-color: transparent;
 }
+
+.dark_mood {
+    cursor: pointer;
+}
+
 
 /* offvanvas */
 .offcanvas {
@@ -200,6 +239,7 @@ body {
     position: absolute;
     left: 0;
     bottom: 10px;
+    cursor: pointer;
 }
 
 .dark_mood {
@@ -496,13 +536,16 @@ a.category-link:hover .circle-placeholder {
     font-weight: bold;
     padding: 1rem 2rem;
     animation: fadeIn 2s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
 }
 
 /* banner */
-.banner{
+.banner {
     width: 98%;
     margin: auto;
 }
+
 .footer-help {
     background-color: #8e44ad;
     direction: rtl;
@@ -529,7 +572,7 @@ footer {
     border-top: 5px solid #6822e944;
     background: linear-gradient(to right, #6a1b9a, #8e24aa);
     overflow-x: hidden;
-  }  
+}
 
 .footer-link {
     color: #f3e5f5;
@@ -667,7 +710,22 @@ footer {
 
 }
 
+@media (max-width: 576px) {
+    /* chat box mobile */
+    #chatBox {
+      display: none !important;
+    }
+  
+    #chatIcon {
+      display: flex !important;
+    }
+  }  
+
 @media (max-width: 550px) {
+    /* slider */
+    .slider {
+        height: 200px;
+    }
 
     /* shop ads */
     .d_food_img {
@@ -680,7 +738,7 @@ footer {
 
     /* slider */
     .slider {
-        height: 150px;
+        height: 180px;
     }
 
     .img {
