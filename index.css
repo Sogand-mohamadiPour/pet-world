@@ -6,6 +6,7 @@
     --purple5: #5e2d91;
     --purple6: #a066c9;
     --purple7: #8a42b9;
+    --purple9: #c582e2;
     --white: #fff;
     --soft-gray: #f4f4f4;
 }
@@ -39,7 +40,7 @@ body {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: var(--purple1);
+    background-color: var(--purple9);
     color: #ffffff;
     max-width: 300px;
     cursor: pointer;
@@ -50,7 +51,7 @@ body {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: var(--purple1);
+    background-color: var(--purple9);
     color: white;
     width: 60px;
     height: 60px;
@@ -70,7 +71,7 @@ body {
 
 /* -----------[navbar]------------- */
 .navbar {
-    background-color: var(--purple1);
+    background-color: var(--purple9);
     height: 90px;
     position: sticky !important;
     top: 0;
@@ -383,7 +384,7 @@ a.category-link:hover .circle-placeholder {
 
 
 .service-title {
-    background-color: var(--purple1);
+    background-color: var(--purple9);
     padding: 0;
     font-weight: bold;
     height: 50px;
@@ -395,7 +396,7 @@ a.category-link:hover .circle-placeholder {
 
 .rounded-container {
     border-radius: 30px;
-    background-color: #eebbef;
+    background-color: #f1c5fd;
     padding: 30px 0px;
     max-width: 1140px;
     margin: auto;
@@ -411,11 +412,8 @@ a.category-link:hover .circle-placeholder {
 .box {
     margin-right: 70px;
     display: flex;
-    /* Use flexbox for the container */
     flex-wrap: wrap;
-    /* Allow wrapping to next row */
     gap: 15px;
-    /* Space between items */
 }
 
 .d_food_img {
@@ -468,7 +466,7 @@ a.category-link:hover .circle-placeholder {
     flex-direction: column;
     justify-content: center;
     gap: 1.5rem;
-    background-color: var(--purple1);
+    background-color: var(--purple9);
 }
 
 .account_1 p {
@@ -546,7 +544,7 @@ a.category-link:hover .circle-placeholder {
 }
 
 .footer-help {
-    background-color: #8e44ad;
+    background-color: #dd93fd;
     direction: rtl;
 }
 
@@ -568,20 +566,24 @@ a.category-link:hover .circle-placeholder {
 
 /* footer */
 footer {
-    border-top: 5px solid #6822e944;
-    background: linear-gradient(to right, #6a1b9a, #8e24aa);
+    /* border-top: 5px solid #6822e944; */
+    background: #e5c7fa;
     overflow-x: hidden;
+    color: black !important;
 }
 
 .footer-link {
-    color: #f3e5f5;
+    color: #000000;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-link:hover {
-    color: #d1c4e9;
     text-decoration: underline;
+}
+
+.about{
+    color: #000;
 }
 
 .social-icon {

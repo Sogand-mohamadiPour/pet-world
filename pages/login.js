@@ -11,21 +11,25 @@ function change_theme() {
         document.querySelector("#offcanvasNavbar").style.backgroundColor = "#d69ade"; // mobile menu bg color
         document.querySelector("body").style.backgroundColor = "#BBBCB6"; // body bg
         document.querySelector(".nv").style.color = "black"; // pet word color
-        document.querySelectorAll(".icons")[0].style.color = "black"; // icons color
-        document.querySelectorAll(".icons")[1].style.color = "black"; // icons color
+        document.querySelectorAll(".icons i")[0].style.color = "black"; // icons color
+        document.querySelectorAll(".icons i")[1].style.color = "black"; // icons color
+        document.querySelectorAll(".pet a")[1].style.setProperty("color", "black", "important"); // pet world color
+        document.querySelector("#form").style.backgroundColor = "black"; // form bg
         change_b = true;
     }
     else {
-        document.getElementById("moons").src = "../assets/pic/moon.png"; //moon desktop
-        document.getElementById("moon").src = "../assets/pic/moon.png"; // moon mobile
+        document.getElementById("moons").src = "../assets/pic/moon_fill.png"; //moon desktop
+        document.getElementById("moon").src = "../assets/pic/moon_fill.png"; //moon desktop
         document.getElementById("inpt").style.backgroundColor = 'white'; //search bar
         document.getElementById("btn").style.backgroundColor = '#F2EFE7'; //search bar btn
         document.getElementById("inpt").style.color = "black"; // search bar font
         document.querySelector("#offcanvasNavbar").style.backgroundColor = "white"; // mobile menu bg color
         document.querySelector("body").style.backgroundColor = "white"; //body bg
         document.querySelector(".nv").style.color = "white"; // pet word color
-        document.querySelectorAll(".icons")[0].style.color = "white"; // icons color
-        document.querySelectorAll(".icons")[1].style.color = "white"; // icons color
+        document.querySelectorAll(".icons i")[0].style.color = "white"; // icons color
+        document.querySelectorAll(".icons i")[1].style.color = "white"; // icons color
+        document.querySelectorAll(".pet a")[1].style.setProperty("color", "white", "important"); // pet world color
+        document.querySelector("#form").style.backgroundColor = "white"; // form bg
         change_b = false;
     }
 }
@@ -114,7 +118,7 @@ function result(e) {
         document.getElementById("check_p").style.display = "block"; // show warning
         bp = false;
     } else {
-        document.querySelectorAll(".input")[2].style.borderColor = "#222";
+        document.querySelectorAll(".input")[4].style.borderColor = "#222";
         document.getElementById("check_p").style.display = "none"; // hide warning
         bp = true;
     }
@@ -159,10 +163,11 @@ function togglePassword1() {
     }
 }
 
+// strength of the pass
+
 function check_pass2() {
     const pass = document.getElementById("txt_pass").value;
     const strengthBar = document.getElementById("strength-bar");
-    const strengthText = document.getElementById("strength-text");
 
     let strength = 0;
 
@@ -175,15 +180,12 @@ function check_pass2() {
     if (strength <= 2) {
         strengthBar.style.width = "30%";
         strengthBar.style.backgroundColor = "red";
-        strengthText.textContent = "ضعیف";
     } else if (strength === 3 || strength === 4) {
         strengthBar.style.width = "60%";
         strengthBar.style.backgroundColor = "orange";
-        strengthText.textContent = "متوسط";
     } else {
         strengthBar.style.width = "100%";
         strengthBar.style.backgroundColor = "green";
-        strengthText.textContent = "قوی";
     }
 }
 

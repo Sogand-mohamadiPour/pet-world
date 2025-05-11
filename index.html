@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
         integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Font Awesome CDN (add to your <head> if not already there) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Pet World</title>
 </head>
@@ -40,7 +39,7 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="d-flex">
+            <div class="d-flex pet">
                 <a href="index.html"><img class="img" src="assets/pic/patoo-logo-header.webp" alt="pet world"></a>
                 <a class="navbar-brand m-4 nv" href="index.html">دنیایی برای پت ها</a>
             </div>
@@ -54,10 +53,10 @@
                     <a href="#" class="icons"><i class="bi bi-cart3"></i></a>
                 </div>
             </div>
-            <img src="assets/pic/moon.png" alt="dark-mood" class="dark_mood" id="moons" onclick="change_theme()">
+            <img src="assets/pic/moon_fill.png" alt="dark-mood" class="dark_mood" id="moons" onclick="change_theme()">
         </div>
     </nav>
-    <!-- Offcanvas Sidebar -->
+    <!------------ Offcanvas  ------------>
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title">منو</h5>
@@ -71,7 +70,7 @@
                             class="fa">&#xf0f0;</i>دکتر ها</a></li>
                 <li class="nav-item"><a class="nav-link text-black" href="#"><i style="font-size:24px"
                             class="fa">&#xf233;</i>خدمات</a></li>
-                <li class="nav-item"><a class="nav-link text-black" href="#"><i style="font-size:24px"
+                <li class="nav-item"><a class="nav-link text-black" href="pages/shop.html"><i style="font-size:24px"
                             class="fa">&#xf290;</i>فروشگاه</a></li>
             </ul>
 
@@ -96,10 +95,10 @@
     <div class="menu_desktop">
         <div>
             <ul class="d-flex justify-content-around list-unstyled">
-                <li><a class="menu_a" href="#">صفحه اصلی</a></li>
+                <li><a class="menu_a" href="index.html">صفحه اصلی</a></li>
                 <li><a class="menu_a" href="#">دکتر ها</a></li>
                 <li><a class="menu_a" href="#">خدمات</a></li>
-                <li><a class="menu_a" href="#">فروشگاه</a></li>
+                <li><a class="menu_a" href="pages/shop.html">فروشگاه</a></li>
             </ul>
         </div>
     </div>
@@ -138,7 +137,7 @@
     <!-- ----------------------------------------------------------------- -->
 
 
-    <!-- Cards Section -->
+    <!------------- Cards ------------>
     <div class="container">
         <div class="d1">
             <div class="d2">
@@ -384,7 +383,7 @@
             </div>
         </div>
     </div>
-    <!---------------------- تبلیغ قروشگاه ------------------->
+    <!---------------------- تبلیغ فروشگاه ------------------->
     <div class="container mt-4">
         <div class="d-flex egg">
             <i class="bi bi-egg-fried mt-1 me-2 fs-5"></i>
@@ -417,7 +416,7 @@
             </div>
         </div>
         <div class="btn_shop">
-            <a class="btn btn-purple fw-bold">برای بازدید از فروشگاه کلیک کنید</a>
+            <a href="pages/shop.html" class="btn btn-purple fw-bold">برای بازدید از فروشگاه کلیک کنید</a>
         </div>
 
     </div>
@@ -500,7 +499,7 @@
 
                 <div class="d-flex flex-wrap col-12 col-md-6">
                     <div class="col-6 col-md-6 mb-4 px-2">
-                        <h5 class="fw-bold">درباره ما</h5>
+                        <h5 class="fw-bold about">درباره ما</h5>
                         <ul class="list-unstyled">
                             <li><a href="#" class="footer-link">اطلاعات شرکت</a></li>
                             <li><a href="#" class="footer-link">فرصت‌های شغلی</a></li>
@@ -508,7 +507,7 @@
                         </ul>
                     </div>
                     <div class="col-6 col-md-6 mb-4 px-2">
-                        <h5 class="fw-bold">خدمات</h5>
+                        <h5 class="fw-bold about">خدمات</h5>
                         <ul class="list-unstyled">
                             <li><a href="#" class="footer-link">پرسش‌های متداول</a></li>
                             <li><a href="#" class="footer-link">فروش در پت‌شاپ</a></li>
@@ -520,7 +519,7 @@
 
                 <div class="d-flex flex-wrap col-12 col-md-6">
                     <div class="col-6 col-md-6 mb-4 px-2">
-                        <h5 class="fw-bold">اپلیکیشن ما</h5>
+                        <h5 class="fw-bold about">اپلیکیشن ما</h5>
                         <div class="app">
                             <img src="assets/pic/apple-store-badge.jpg" alt="App Store"
                                 class="img-fluid mb-2 rounded shadow-sm">
@@ -529,7 +528,7 @@
                         </div>
                     </div>
                     <div class="col-6 col-md-6 mb-4 px-2"> <!-- add px-2 -->
-                        <h5 class="fw-bold">ما را دنبال کنید</h5>
+                        <h5 class="fw-bold about">ما را دنبال کنید</h5>
                         <div class="d-flex justify-content-center justify-content-md-start gap-2 mt-2">
                             <img src="assets/pic/facebook_.png" alt="Facebook" class="social-icon">
                             <img src="assets/pic/whatsapp.png" alt="YouTube" class="social-icon">
@@ -543,7 +542,7 @@
             <hr class="border-light">
             <div class="row text-center">
                 <div class="col pb-2">
-                    <small>© تمامی حقوق برای پت‌شاپ محفوظ است - ۱۴۰۴</small>
+                    <small class="about">© تمامی حقوق برای پت‌شاپ محفوظ است - ۱۴۰۴</small>
                 </div>
             </div>
         </div>
