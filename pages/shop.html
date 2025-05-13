@@ -14,6 +14,22 @@
 </head>
 
 <body>
+    <!------------ Chat Box ----------->
+    <div id="chatBox" class="chat-box shadow rounded p-3 d-none">
+        <div class="d-flex justify-content-between align-items-start">
+            <div>
+                <p class="mb-1 fw-bold"><i class="fas fa-headset me-1"></i> چت پشتیبانی: </p>
+                <p class="mb-1">سؤالی دارید؟ تیم فنی ما آماده پاسخگویی به شماست.</p>
+            </div>
+            <button class="btn-close btn-close-white ms-2" aria-label="Close" onclick="closeChatBox()"></button>
+        </div>
+    </div>
+
+    <!------------------- Chat box mobile ----------------->
+    <div id="chatIcon" class="chat-icon d-none">
+        <i class="fa fa-commenting"></i>
+    </div>
+
     <!--------------- Navbar --------------->
     <nav class="navbar navbar-expand-lg navv">
         <div class="container">
@@ -34,7 +50,8 @@
                     <a href="#" class="icons"><i class="bi bi-cart3"></i></a>
                 </div>
             </div>
-            <img src="../assets/pic/moon_fill.png" alt="dark-mood" class="dark_mood" id="moons" onclick="change_theme()">
+            <img src="../assets/pic/moon_fill.png" alt="dark-mood" class="dark_mood" id="moons"
+                onclick="change_theme()">
         </div>
     </nav>
     <!-- Offcanvas Sidebar -->
@@ -144,28 +161,220 @@
 
         </div>
     </div>
+    <!-- ------------------------------------------------------------------------------------------- -->
+    <div class="big">
+        <div class="row flex-wrap">
+            <!-- ------------------------------------------------------------ -->
+            <div class="text-center my-4">
+                <h4 class="d-inline-block">
+                    مخصوص سگ ها
+                    <i class="fa fa-hand-o-down"></i>
+                </h4>
+            </div>
+
+            <div class="d_container d-flex">
+                <div class="d_products">
+                    <div class="card">
+                        <img src="../assets/pic/dry_food.avif" class="card-img-top" alt="product">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">غذای خشک </h5>
+                            <h6 class="text-muted mt-2">پایه هر وعده غذایی، با تردی که برای سلامت دندان عالی است.</h6>
+                            <a href="#" class="btn btn-shop mt-3">خرید</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="d_products">
+                    <div class="card">
+                        <img src="../assets/pic/wet_food.avif" class="card-img-top" alt="product">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">غذای خیس </h5>
+                            <h6 class="text-muted mt-2">غذای کامل با طعم دلپذیر و بافتی که جذابیت وعده‌های غذایی را حفظ
+                                می‌کند.</h6>
+                            <a href="#" class="btn btn-shop mt-3">خرید</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="d_products">
+                    <div class="card">
+                        <img src="../assets/pic/fresh_food.avif" class="card-img-top" alt="product">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">غذاهای تازه و مکمل‌ها</h5>
+                            <h6 class="text-muted mt-2">راهی بی‌نظیر برای تلفیق اجزای مغذی و طعمی لذت‌بخش جهت بهبود رژیم
+                                غذایی.</h6>
+                            <a href="#" class="btn btn-shop mt-3">خرید</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="d_products">
+                    <div class="card">
+                        <img src="../assets/pic/dehydrared.avif" class="card-img-top" alt="product">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">خشک شده</h5>
+                            <h6 class="text-muted mt-2">با فرآوری کم برای حفظ ارزش‌های غذایی، تنها کافیست آب بیفزایید و
+                                از طعم آن لذت ببرید.</h6>
+                            <a href="#" class="btn btn-shop mt-3">خرید</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ------------------------------ -->
+            <div class="text-center my-4">
+                <h4 class="d-inline-block">
+                    مخصوص گربه ها
+                    <i class="fa fa-hand-o-down"></i>
+                </h4>
+            </div>
+            <div class="d_container d-flex">
+                <div class="d_products">
+                    <div class="card">
+                        <img src="../assets/pic/cat_food_wet.avif" class="card-img-top" alt="product">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">غذای خیس </h5>
+                            <h6 class="text-muted mt-2">غذایی با طعم دلپذیر و بافتی که جذابیت وعده‌های غذایی را حفظ
+                                می‌کند.</h6>
+                            <a href="#" class="btn btn-shop mt-3">خرید</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="d_products">
+                    <div class="card">
+                        <img src="../assets/pic/cat_food_dry.avif" class="card-img-top" alt="product">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">غذای خشک </h5>
+                            <h6 class="text-muted mt-2">پایه هر وعده غذایی، با تردی که برای سلامت دندان عالی است.</h6>
+                            <a href="#" class="btn btn-shop mt-3">خرید</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="d_products">
+                    <div class="card">
+                        <img src="../assets/pic/khak.avif" class="card-img-top" alt="product">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">خاک گربه</h5>
+                            <h6 class="text-muted mt-2">خاک هایی با کیفیت و قدرت جذب باور نکردنی برای راحتی گربه شما.
+                            </h6>
+                            <a href="#" class="btn btn-shop mt-3">خرید</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="d_products">
+                    <div class="card">
+                        <img src="../assets/pic/tashvighi.avif" class="card-img-top" alt="product">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">تشویقی</h5>
+                            <h6 class="text-muted mt-2">وعده هایی خوشمزه به عنوان تشویقی برای گربه شما و تشویقش.</h6>
+                            <a href="#" class="btn btn-shop mt-3">خرید</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center my-4">
+                <h4 class="d-inline-block">
+                    مخصوص ماهی ها
+                    <i class="fa fa-hand-o-down"></i>
+                </h4>
+            </div>
+            <div class="d_container d-flex">
+                <div class="d_products">
+                    <div class="card">
+                        <img src="../assets/pic/aquarioum.avif" class="card-img-top" alt="product">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">کیت های آکواریوم</h5>
+                            <h6 class="text-muted mt-2">ابزار ضروری برای نگهداری آکواریوم،با تجهیزات باکیفیت جهت حفظ
+                                سلامت و شفافیت آب.</h6>
+                            <a href="#" class="btn btn-shop mt-3">خرید</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="d_products">
+                    <div class="card">
+                        <img src="../assets/pic/fish_food.avif" class="card-img-top" alt="product">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">غذا ها </h5>
+                            <h6 class="text-muted mt-2">غذای مغذی برای ماهیان، غنی از ترکیبات ضروری جهت حفظ سلامت و
+                                انرژی آن‌ها.</h6>
+                            <a href="#" class="btn btn-shop mt-3">خرید</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="d_products">
+                    <div class="card">
+                        <img src="../assets/pic/decor.avif" class="card-img-top" alt="product">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">دکوری ها</h5>
+                            <h6 class="text-muted mt-2">تزئینات متنوع برای آکواریوم، ایجاد محیطی جذاب و طبیعی برای
+                                ماهیان شما.</h6>
+                            <a href="#" class="btn btn-shop mt-3">خرید</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="d_products">
+                    <div class="card">
+                        <img src="../assets/pic/filters.avif" class="card-img-top" alt="product">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">فیلتر ها</h5>
+                            <h6 class="text-muted mt-2">سیستم فیلتراسیون پیشرفته، تضمین کیفیت و شفافیت برای محیط سالم
+                                ماهیان.</h6>
+                            <a href="#" class="btn btn-shop mt-3">خرید</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------------------------------------------------------------------------------------------- -->
     <!-- About -->
     <section class="about-section py-5 text-center text-md-right ">
         <div class="container">
             <h2 class="mb-4 section-title">درباره ما</h2>
-            <div class="row align-items-center">
-                <div class="col-md-6 mb-4 mb-md-0">
-                    <img src="../assets/pic/vet_care.jpg" alt="درباره ما" class="img-fluid rounded shadow-sm">
+            <div class="row align-items-stretch div1_parent">
+                <div class="col-md-6 mb-4 mb-md-0 d-flex div1">
+                    <div class="w-100">
+                        <img src="../assets/pic/vet_care.jpg" alt="درباره ما"
+                            class="img-fluid rounded shadow-sm h-100 w-100 object-fit-cover img_about">
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="about-text p-4 rounded bg-light shadow-sm">
+                <div class="col-md-6 d-flex">
+                    <div class="about-text p-4 rounded bg-light shadow-sm w-100">
                         <h4 class="mb-3 text-purple">پت شاپ ما، خانه‌ای برای حیوانات شما</h4>
                         <p class="mb-3 fif">
                             ما با عشق به حیوانات خانگی فعالیت می‌کنیم تا خدماتی بی‌نظیر و محصولات با کیفیت ارائه دهیم.
                             از مشاوره پزشکی گرفته تا ارسال سریع، همیشه در کنار شما و پت‌های دوست‌داشتنی‌تان هستیم.
                         </p>
-                        <a href="#" class="btn btn_shade mt-3">بیشتر بدانید</a>
+                        <a href="#" class="btn btn_shade mt-auto">بیشتر بدانید</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+
+
+    <!--------------------  vet chat ----------------------->
+    <div class="form-container">
+        <h2 class="form-title">راجع به پت خود به ما بگویید!</h2>
+        <h4 class="form-subtitle">نوع پت خود را انتخاب کنید</h4>
+        <p class="form-info">مشاوران ما در حال حاضر تنها برای سگ ها و گربه ها در دسترس هستند.</p>
+
+        <div class="pet-selection">
+            <div class="pet-option" data-pet="cat">🐈 گربه</div>
+            <div class="pet-option" data-pet="dog">🐕 سگ</div>
+        </div>
+
+        <form>
+            <label>نام پت شما:</label>
+            <input type="text" placeholder="مثلاً: میلو">
+
+            <label>شماره تلفن همراه:</label>
+            <input type="tel" placeholder="مثلاً: 09123456789">
+
+            <label>توضیحات مشکل شما:</label>
+            <textarea placeholder="توضیحات را وارد کنید..."></textarea>
+
+            <button type="submit" class="rounded-2">ثبت</button>
+        </form>
+    </div>
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="shop.js"></script>
 </body>

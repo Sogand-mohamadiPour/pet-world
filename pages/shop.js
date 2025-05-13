@@ -32,6 +32,29 @@ function change_theme() {
     }
 }
 // --------------------------------------------------------------------------------------------
+// -----------chat box
+function closeChatBox() {
+    document.getElementById("chatBox").classList.add("d-none");
+}
+
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        const chatBox = document.getElementById("chatBox");
+        const chatIcon = document.getElementById("chatIcon");
+
+        if (window.innerWidth <= 576) {
+            chatIcon.classList.remove("d-none");
+        }
+        else {
+            chatBox.classList.remove("d-none");
+
+            // close after 15 sec
+            setTimeout(() => {
+                chatBox.classList.add("d-none");
+            }, 15000);
+        }
+    }, 5000); // show 5 sec after load
+});
 // timer
 
 let doctors = 115;
@@ -90,4 +113,14 @@ let first = setInterval(counterdoc, 35);
 let second = setInterval(countercos, 0.01);
 let third = setInterval(countershi, 0.00000001);
 let fourth = setInterval(countersur, 8);
-// end timer
+// end timer-------------------------------------------------------
+// vet chat--------------------------------------------------------
+const pet_options = document.querySelectorAll('.pet-option');
+
+pet_options.forEach(option => {
+    option.addEventListener('click', () => {
+        pet_options.forEach(opt => opt.classList.remove('selected'));
+        option.classList.add('selected');
+    });
+});
+

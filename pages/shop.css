@@ -34,7 +34,42 @@ body {
     font-family: 'Sahel', sans-serif;
     direction: rtl;
     font-variant-numeric: arabic-indic;
+    overflow-x: hidden;
 }
+
+/* --------chat box---------- */
+.chat-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--purple9);
+    color: #ffffff;
+    max-width: 300px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--purple9);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.chat-icon:hover {
+    background-color: #59329d;
+}
+
 
 /* -----------[navbar]------------- */
 .navbar {
@@ -257,6 +292,18 @@ body {
     }
 }
 
+@media (max-width: 576px) {
+
+    /* chat box mobile */
+    #chatBox {
+        display: none !important;
+    }
+
+    #chatIcon {
+        display: flex !important;
+    }
+}
+
 @media (max-width: 480px) {
 
     .img {
@@ -361,12 +408,54 @@ body {
     border-color: #7d57c6 !important;
 }
 
+/* --------------------------------------------- */
+.big {
+    width: 97%;
+    margin: auto;
+}
+
+.d_container {
+    margin: auto;
+}
+
+.d_products {
+    width: 24%;
+    margin: 10px;
+}
+
+.card {
+    border-radius: 10px;
+}
+
+.card img {
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.btn-shop {
+    background-color: var(--purple8) !important;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* --------------------------------------------- */
 /* about */
-section {
+
+/* Section wrapper */
+.about-section {
     background-color: var(--purple8) !important;
     margin: auto;
     width: 95%;
     border-radius: 40px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .section-title {
@@ -395,26 +484,198 @@ section {
     box-shadow: 0 4px 12px rgba(125, 87, 198, 0.3);
 }
 
+
 .about-text {
-    height: 315px;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    width: 100%;
+}
+
+
+.img_about {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
 }
 
 .fif {
-    padding-top: 40px;
+    padding-top: 2rem;
+}
+
+.div1_parent {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.div1 {
+    display: flex;
+}
+
+/********************** vet chat ************************/
+.form-container {
+    width: 90%;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(125, 87, 198, 0.2);
+    margin-top: 20px;
+}
+
+.form-title {
+    text-align: center;
+    color: #7d57c6;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.form-subtitle {
+    text-align: center;
+    color: #b788e5;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.form-info {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.pet-selection {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.pet-option {
+    flex: 1;
+    background: #f0d6ff;
+    padding: 15px 10px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+}
+
+.pet-option.selected {
+    border-color: #7d57c6;
+    background: #e9ccff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d1b6f3;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #7d57c6;
+    color: white;
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #643ec2;
+}
+
+@media (max-width: 500px) {
+    .pet-selection {
+        flex-direction: column;
+    }
 }
 
 
-
-
 /* responsive design */
+@media (max-width:1399px) {
+
+    /* about */
+    .fiff {
+        height: 200px;
+    }
+
+}
+
+@media (max-width:1072px) {
+
+    /* products */
+    .big {
+        width: 99%;
+
+    }
+}
+
+@media (max-width: 984px) {
+
+    /* products */
+    .big {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .d_container {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .d_products {
+        width: 48%;
+        margin: 1%;
+    }
+}
+
 @media (max-width: 750px) {
     #count div {
         width: 40%;
         margin: 10px auto;
     }
 
+    .about-section .col-md-6 {
+        margin-bottom: 1.5rem;
+    }
+
 }
+
+@media (max-width: 590px) {
+
+    /* products */
+    .d_products {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
 
 @media (max-width: 450px) {
     #count div {
