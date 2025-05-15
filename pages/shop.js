@@ -124,3 +124,110 @@ pet_options.forEach(option => {
     });
 });
 
+// tab js --------------------------------------------------------
+function showTab(tabId) {
+    const triggerEl = document.querySelector(`[data-bs-target="#${tabId}"]`);
+    const tab = new bootstrap.Tab(triggerEl);
+    tab.show();
+}
+// modal basket---------------------------------------------------
+let arr_bass = [];
+let count_product_bas = 0;
+
+function addToBasket(element) {
+    let cardBody = element.closest('.card-body');
+    let name = cardBody.querySelector('.card-title').innerText;
+    let img = cardBody.parentElement.querySelector('img').src;
+
+    let existing = arr_bass.find(item => item.name === name);
+
+    if (existing) {
+        existing.count++;
+    } else {
+        arr_bass.push({
+            name: name,
+            imgsrc: img,
+            count: 1
+        });
+    }
+
+    count_product_bas++;
+    document.getElementById("counter").style.opacity = "1";
+    document.getElementById("counter").innerText = count_product_bas;
+
+    showTab('tab1'); // show basket tab
+    show_bas(); // render basket items
+}
+
+// Shows basket items inside tab1 content
+function show_bas() {
+    const list = document.getElementById('listp');
+    list.innerHTML = ''; // Clear previous content
+
+    if (arr_bass.length === 0) {
+        document.getElementById("emptybas").style.display = "block";
+    } else {
+        document.getElementById("emptybas").style.display = "none";
+
+        arr_bass.forEach((item, i) => {
+            let iconHtml = '';
+            if (item.count === 1) {
+                // Trash icon when count = 1
+                iconHtml = `<i class="fa fa-trash-o" onclick="removeItem(${i})" style="cursor:pointer;"></i>`;
+            } else {
+                // Minus icon when count > 1
+                iconHtml = `<button class="pmt_btn" onclick="decrement(${i})">-</button>`;
+            }
+
+            let row = document.createElement('div');
+            row.classList.add("row_product_basket");
+            row.innerHTML = `
+                <img src="${item.imgsrc}">
+                <span>${item.name}</span>
+                <button class="pmt_btn" onclick="increment(${i})">+</button>
+                <span class="quantity">${item.count}</span>
+                ${iconHtml}
+            `;
+            list.appendChild(row);
+        });
+    }
+}
+
+function removeItem(index) {
+    count_product_bas -= arr_bass[index].count; // Decrease total count by that item's count
+    arr_bass.splice(index, 1); // Remove item from array
+    updateCounter();
+    show_bas();
+}
+
+function decrement(index) {
+    if (arr_bass[index].count > 1) {
+        arr_bass[index].count--;
+        count_product_bas--;
+        updateCounter();
+        show_bas();
+    }
+}
+
+function updateCounter() {
+    const counterElem = document.getElementById("counter");
+    if (count_product_bas <= 0) {
+        counterElem.style.opacity = "0";
+        counterElem.innerText = "";
+    } else {
+        counterElem.style.opacity = "1";
+        counterElem.innerText = count_product_bas;
+    }
+}
+
+
+function increment(index) {
+    arr_bass[index].count++;
+    count_product_bas++;  // Increase total count
+    document.getElementById("counter").innerText = count_product_bas;  // Update badge text
+    show_bas();
+}
+
+
+
+

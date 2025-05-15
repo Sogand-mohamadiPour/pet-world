@@ -327,6 +327,15 @@ body {
 }
 
 /* ----------------------------------------------------------------------------------------------------------------- */
+.badge_carrd {
+    position: absolute;
+    bottom: 40px;
+    background-color: var(--purple7);
+    width: 25px;
+    text-align: center;
+    justify-content: center;
+}
+
 /* timer */
 #count {
     width: 95%;
@@ -443,7 +452,13 @@ body {
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
+    width: 90%;
 }
+
+.i_a {
+    cursor: pointer;
+}
+
 
 /* --------------------------------------------- */
 /* about */
@@ -609,11 +624,129 @@ button:hover {
     background-color: #643ec2;
 }
 
-@media (max-width: 500px) {
-    .pet-selection {
-        flex-direction: column;
-    }
+
+
+/* footer */
+footer {
+    /* border-top: 5px solid #6822e944; */
+    background: #e5c7fa;
+    overflow-x: hidden;
+    color: black !important;
 }
+
+.footer-link {
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.about {
+    color: #000;
+}
+
+.social-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #ffffff22;
+    padding: 1px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    background-color: #ffffff44;
+}
+
+.app img {
+    display: block;
+    width: 150px;
+    height: 50px;
+}
+
+/* --------------------------modal styles--------------------- */
+/* Basket item container */
+.row_product_basket {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Basket item image */
+.row_product_basket img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Basket item name and count container */
+.row_product_basket span {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Count badge or quantity span */
+.quantity {
+    background-color: #6f42c1;
+    /* Bootstrap purple-ish */
+    color: white;
+    border-radius: 12px;
+    padding: 2px 8px;
+    font-weight: 600;
+    margin-left: auto;
+}
+
+/* Plus button styling */
+.pmt_btn {
+    background-color: #6f42c1;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.pmt_btn:hover {
+    background-color: #563d7c;
+}
+
+/* Trash icon */
+.row_product_basket i.fa-trash-o {
+    color: #dc3545;
+    /* Bootstrap danger */
+    cursor: pointer;
+    margin-left: 8px;
+    font-size: 18px;
+}
+ 
+
+.pmt_btn {
+  background-color: transparent !important;
+  color: purple !important; 
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 0 6px;
+}
+
+.pmt_btn:hover {
+  color: darkmagenta;
+  background-color: #f0e6f7; 
+  border-radius: 4px;
+}
+
+
 
 
 /* responsive design */
@@ -626,11 +759,20 @@ button:hover {
 
 }
 
+@media (max-width:1225px) {
+
+    /* products */
+    .big {
+        width: 100%;
+
+    }
+}
+
 @media (max-width:1072px) {
 
     /* products */
     .big {
-        width: 99%;
+        width: 100%;
 
     }
 }
@@ -639,7 +781,7 @@ button:hover {
 
     /* products */
     .big {
-        width: 95%;
+        width: 90%;
         display: flex;
         flex-direction: column;
     }
@@ -676,6 +818,11 @@ button:hover {
     }
 }
 
+@media (max-width: 500px) {
+    .pet-selection {
+        flex-direction: column;
+    }
+}
 
 @media (max-width: 450px) {
     #count div {

@@ -47,7 +47,12 @@
                 </div>
                 <div class="d-flex">
                     <a href="login.html" class="icons"><i class="bi bi-person-fill"></i></a>
-                    <a href="#" class="icons"><i class="bi bi-cart3"></i></a>
+                    <a href="#" class="icons" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                            class="bi bi-cart3">
+                            <span id="counter" class="badge_carrd translate-middle badge rounded-pill"
+                                style="opacity: 0;">
+                                0
+                            </span></i></a>
                 </div>
             </div>
             <img src="../assets/pic/moon_fill.png" alt="dark-mood" class="dark_mood" id="moons"
@@ -86,7 +91,7 @@
                 <h3 class="ii d-block bi bi-whatsapp text-success"></h3>
             </div>
         </div>
-        <img src="../assets/pic/moon.png" alt="dark-mood" class="dark_mood-cn" id="moon" onclick="change_theme()">
+        <img src="../assets/pic/moon_fill.png" alt="dark-mood" class="dark_mood-cn" id="moon" onclick="change_theme()">
     </div>
 
     <!-- ------------------------------menu desktop------------------- -->
@@ -161,7 +166,7 @@
 
         </div>
     </div>
-    <!-- ------------------------------------------------------------------------------------------- -->
+    <!-- ---------------------------------------------cards---------------------------------------------- -->
     <div class="big">
         <div class="row flex-wrap">
             <!-- ------------------------------------------------------------ -->
@@ -179,7 +184,16 @@
                         <div class="card-body text-center">
                             <h5 class="card-title">غذای خشک </h5>
                             <h6 class="text-muted mt-2">پایه هر وعده غذایی، با تردی که برای سلامت دندان عالی است.</h6>
-                            <a href="#" class="btn btn-shop mt-3">خرید</a>
+                            <div class="d-flex justify-content-center align-items-center gap-2 mt-3">
+                                <a href="#" class="btn btn-shop">خرید</a>
+                                <a href="#" class="text-danger" title="افزودن به علاقه‌مندی‌ها" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal" onclick="showTab('tab2')"><i style="font-size:24px"
+                                        class="fa">&#xf08a;</i></a>
+                                <i class="text-dark position-relative i_a" title="افزودن به سبد خرید"
+                                    onclick="addToBasket(this)">
+                                    <i class="fa" style="font-size:24px" id="basketIcon">&#xf291;</i>
+                                </i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -190,7 +204,16 @@
                             <h5 class="card-title">غذای خیس </h5>
                             <h6 class="text-muted mt-2">غذای کامل با طعم دلپذیر و بافتی که جذابیت وعده‌های غذایی را حفظ
                                 می‌کند.</h6>
-                            <a href="#" class="btn btn-shop mt-3">خرید</a>
+                            <div class="d-flex justify-content-center align-items-center gap-2 mt-3">
+                                <a href="#" class="btn btn-shop">خرید</a>
+                                <a href="#" class="text-danger" title="افزودن به علاقه‌مندی‌ها" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal" onclick="showTab('tab2')"><i style="font-size:24px"
+                                        class="fa">&#xf08a;</i></a>
+                                <i class="text-dark position-relative i_a" title="افزودن به سبد خرید"
+                                    onclick="addToBasket(this)">
+                                    <i class="fa" style="font-size:24px" id="basketIcon">&#xf291;</i>
+                                </i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -201,7 +224,16 @@
                             <h5 class="card-title">غذاهای تازه و مکمل‌ها</h5>
                             <h6 class="text-muted mt-2">راهی بی‌نظیر برای تلفیق اجزای مغذی و طعمی لذت‌بخش جهت بهبود رژیم
                                 غذایی.</h6>
-                            <a href="#" class="btn btn-shop mt-3">خرید</a>
+                            <div class="d-flex justify-content-center align-items-center gap-2 mt-3">
+                                <a href="#" class="btn btn-shop">خرید</a>
+                                <a href="#" class="text-danger" title="افزودن به علاقه‌مندی‌ها" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal" onclick="showTab('tab2')"><i style="font-size:24px"
+                                        class="fa">&#xf08a;</i></a>
+                                <i class="text-dark position-relative i_a" title="افزودن به سبد خرید"
+                                    onclick="addToBasket(this)">
+                                    <i class="fa" style="font-size:24px" id="basketIcon">&#xf291;</i>
+                                </i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -212,7 +244,16 @@
                             <h5 class="card-title">خشک شده</h5>
                             <h6 class="text-muted mt-2">با فرآوری کم برای حفظ ارزش‌های غذایی، تنها کافیست آب بیفزایید و
                                 از طعم آن لذت ببرید.</h6>
-                            <a href="#" class="btn btn-shop mt-3">خرید</a>
+                            <div class="d-flex justify-content-center align-items-center gap-2 mt-3">
+                                <a href="#" class="btn btn-shop">خرید</a>
+                                <a href="#" class="text-danger" title="افزودن به علاقه‌مندی‌ها" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal" onclick="showTab('tab2')"><i style="font-size:24px"
+                                        class="fa">&#xf08a;</i></a>
+                                <i class="text-dark position-relative i_a" title="افزودن به سبد خرید"
+                                    onclick="addToBasket(this)">
+                                    <i class="fa" style="font-size:24px" id="basketIcon">&#xf291;</i>
+                                </i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -232,7 +273,16 @@
                             <h5 class="card-title">غذای خیس </h5>
                             <h6 class="text-muted mt-2">غذایی با طعم دلپذیر و بافتی که جذابیت وعده‌های غذایی را حفظ
                                 می‌کند.</h6>
-                            <a href="#" class="btn btn-shop mt-3">خرید</a>
+                            <div class="d-flex justify-content-center align-items-center gap-2 mt-3">
+                                <a href="#" class="btn btn-shop">خرید</a>
+                                <a href="#" class="text-danger" title="افزودن به علاقه‌مندی‌ها" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal" onclick="showTab('tab2')"><i style="font-size:24px"
+                                        class="fa">&#xf08a;</i></a>
+                                <i class="text-dark position-relative i_a" title="افزودن به سبد خرید"
+                                    onclick="addToBasket(this)">
+                                    <i class="fa" style="font-size:24px" id="basketIcon">&#xf291;</i>
+                                </i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -242,7 +292,16 @@
                         <div class="card-body text-center">
                             <h5 class="card-title">غذای خشک </h5>
                             <h6 class="text-muted mt-2">پایه هر وعده غذایی، با تردی که برای سلامت دندان عالی است.</h6>
-                            <a href="#" class="btn btn-shop mt-3">خرید</a>
+                            <div class="d-flex justify-content-center align-items-center gap-2 mt-3">
+                                <a href="#" class="btn btn-shop">خرید</a>
+                                <a href="#" class="text-danger" title="افزودن به علاقه‌مندی‌ها" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal" onclick="showTab('tab2')"><i style="font-size:24px"
+                                        class="fa">&#xf08a;</i></a>
+                                <i class="text-dark position-relative i_a" title="افزودن به سبد خرید"
+                                    onclick="addToBasket(this)">
+                                    <i class="fa" style="font-size:24px" id="basketIcon">&#xf291;</i>
+                                </i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -253,7 +312,16 @@
                             <h5 class="card-title">خاک گربه</h5>
                             <h6 class="text-muted mt-2">خاک هایی با کیفیت و قدرت جذب باور نکردنی برای راحتی گربه شما.
                             </h6>
-                            <a href="#" class="btn btn-shop mt-3">خرید</a>
+                            <div class="d-flex justify-content-center align-items-center gap-2 mt-3">
+                                <a href="#" class="btn btn-shop">خرید</a>
+                                <a href="#" class="text-danger" title="افزودن به علاقه‌مندی‌ها" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal" onclick="showTab('tab2')"><i style="font-size:24px"
+                                        class="fa">&#xf08a;</i></a>
+                                <i class="text-dark position-relative i_a" title="افزودن به سبد خرید"
+                                    onclick="addToBasket(this)">
+                                    <i class="fa" style="font-size:24px" id="basketIcon">&#xf291;</i>
+                                </i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -263,7 +331,16 @@
                         <div class="card-body text-center">
                             <h5 class="card-title">تشویقی</h5>
                             <h6 class="text-muted mt-2">وعده هایی خوشمزه به عنوان تشویقی برای گربه شما و تشویقش.</h6>
-                            <a href="#" class="btn btn-shop mt-3">خرید</a>
+                            <div class="d-flex justify-content-center align-items-center gap-2 mt-3">
+                                <a href="#" class="btn btn-shop">خرید</a>
+                                <a href="#" class="text-danger" title="افزودن به علاقه‌مندی‌ها" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal" onclick="showTab('tab2')"><i style="font-size:24px"
+                                        class="fa">&#xf08a;</i></a>
+                                <i class="text-dark position-relative i_a" title="افزودن به سبد خرید"
+                                    onclick="addToBasket(this)">
+                                    <i class="fa" style="font-size:24px" id="basketIcon">&#xf291;</i>
+                                </i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -282,7 +359,16 @@
                             <h5 class="card-title">کیت های آکواریوم</h5>
                             <h6 class="text-muted mt-2">ابزار ضروری برای نگهداری آکواریوم،با تجهیزات باکیفیت جهت حفظ
                                 سلامت و شفافیت آب.</h6>
-                            <a href="#" class="btn btn-shop mt-3">خرید</a>
+                            <div class="d-flex justify-content-center align-items-center gap-2 mt-3">
+                                <a href="#" class="btn btn-shop">خرید</a>
+                                <a href="#" class="text-danger" title="افزودن به علاقه‌مندی‌ها" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal" onclick="showTab('tab2')"><i style="font-size:24px"
+                                        class="fa">&#xf08a;</i></a>
+                                <i class="text-dark position-relative i_a" title="افزودن به سبد خرید"
+                                    onclick="addToBasket(this)">
+                                    <i class="fa" style="font-size:24px" id="basketIcon">&#xf291;</i>
+                                </i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -293,7 +379,16 @@
                             <h5 class="card-title">غذا ها </h5>
                             <h6 class="text-muted mt-2">غذای مغذی برای ماهیان، غنی از ترکیبات ضروری جهت حفظ سلامت و
                                 انرژی آن‌ها.</h6>
-                            <a href="#" class="btn btn-shop mt-3">خرید</a>
+                            <div class="d-flex justify-content-center align-items-center gap-2 mt-3">
+                                <a href="#" class="btn btn-shop">خرید</a>
+                                <a href="#" class="text-danger" title="افزودن به علاقه‌مندی‌ها" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal" onclick="showTab('tab2')"><i style="font-size:24px"
+                                        class="fa">&#xf08a;</i></a>
+                                <i class="text-dark position-relative i_a" title="افزودن به سبد خرید"
+                                    onclick="addToBasket(this)">
+                                    <i class="fa" style="font-size:24px" id="basketIcon">&#xf291;</i>
+                                </i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -304,7 +399,16 @@
                             <h5 class="card-title">دکوری ها</h5>
                             <h6 class="text-muted mt-2">تزئینات متنوع برای آکواریوم، ایجاد محیطی جذاب و طبیعی برای
                                 ماهیان شما.</h6>
-                            <a href="#" class="btn btn-shop mt-3">خرید</a>
+                            <div class="d-flex justify-content-center align-items-center gap-2 mt-3">
+                                <a href="#" class="btn btn-shop">خرید</a>
+                                <a href="#" class="text-danger" title="افزودن به علاقه‌مندی‌ها" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal" onclick="showTab('tab2')"><i style="font-size:24px"
+                                        class="fa">&#xf08a;</i></a>
+                                <i class="text-dark position-relative i_a" title="افزودن به سبد خرید"
+                                    onclick="addToBasket(this)">
+                                    <i class="fa" style="font-size:24px" id="basketIcon">&#xf291;</i>
+                                </i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -315,7 +419,16 @@
                             <h5 class="card-title">فیلتر ها</h5>
                             <h6 class="text-muted mt-2">سیستم فیلتراسیون پیشرفته، تضمین کیفیت و شفافیت برای محیط سالم
                                 ماهیان.</h6>
-                            <a href="#" class="btn btn-shop mt-3">خرید</a>
+                            <div class="d-flex justify-content-center align-items-center gap-2 mt-3">
+                                <a href="#" class="btn btn-shop">خرید</a>
+                                <a href="#" class="text-danger" title="افزودن به علاقه‌مندی‌ها" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal" onclick="showTab('tab2')"><i style="font-size:24px"
+                                        class="fa">&#xf08a;</i></a>
+                                <i class="text-dark position-relative i_a" title="افزودن به سبد خرید"
+                                    onclick="addToBasket(this)">
+                                    <i class="fa" style="font-size:24px" id="basketIcon">&#xf291;</i>
+                                </i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -376,7 +489,109 @@
         </form>
     </div>
 
-    
+    <!-- footer -->
+    <footer class="text-white pt-5 mb-1">
+        <div class="container">
+
+            <div class="row text-center text-md-start d-flex flex-wrap w-100 m-0 p-0">
+
+                <div class="d-flex flex-wrap col-12 col-md-6">
+                    <div class="col-6 col-md-6 mb-4 px-2">
+                        <h5 class="fw-bold about">درباره ما</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="footer-link">اطلاعات شرکت</a></li>
+                            <li><a href="#" class="footer-link">فرصت‌های شغلی</a></li>
+                            <li><a href="#" class="footer-link">همکاری با ما</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-6 mb-4 px-2">
+                        <h5 class="fw-bold about">خدمات</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="footer-link">پرسش‌های متداول</a></li>
+                            <li><a href="#" class="footer-link">فروش در پت‌شاپ</a></li>
+                            <li><a href="#" class="footer-link">کارت هدیه</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="d-flex flex-wrap col-12 col-md-6">
+                    <div class="col-6 col-md-6 mb-4 px-2">
+                        <h5 class="fw-bold about">اپلیکیشن ما</h5>
+                        <div class="app">
+                            <img src="../assets/pic/apple-store-badge.jpg" alt="App Store"
+                                class="img-fluid mb-2 rounded shadow-sm">
+                            <img src="../assets/pic/google_play_web_generic.png" alt="Google Play"
+                                class="img-fluid rounded shadow-sm">
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-6 mb-4 px-2">
+                        <h5 class="fw-bold about">ما را دنبال کنید</h5>
+                        <div class="d-flex justify-content-center justify-content-md-start gap-2 mt-2">
+                            <img src="../assets/pic/facebook_.png" alt="Facebook" class="social-icon">
+                            <img src="../assets/pic/whatsapp.png" alt="YouTube" class="social-icon">
+                            <img src="../assets/pic/instagram.png" alt="Instagram" class="social-icon">
+                            <img src="../assets/pic/telegram (1).png" alt="TikTok" class="social-icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border-light">
+            <div class="row text-center">
+                <div class="col pb-2">
+                    <small class="about">© تمامی حقوق برای پت‌شاپ محفوظ است - ۱۴۰۴</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">لیست مورد علاقه ها و سبد خرید</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <!-- Tabs nav -->
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1"
+                                type="button" role="tab">سبد خرید</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2"
+                                type="button" role="tab">مورد علاقه ها</button>
+                        </li>
+                    </ul>
+
+                    <!-- Tabs content -->
+                    <div class="tab-content mt-3" id="myTabContent">
+                        <div class="tab-pane fade show active" id="tab1" role="tabpanel">
+                            <div id="listp"></div> <!-- This will be filled dynamically by JS -->
+                            <p id="emptybas" style="display:none">سبد خرید خالی است.</p>
+                        </div>
+
+                        <div class="tab-pane fade" id="tab2" role="tabpanel">
+                            <div id="favlist"></div> <!-- This will be used later for favorites -->
+                            <p id="emptyfav" style="display:none">مورد علاقه‌ای اضافه نشده است.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="shop.js"></script>
 </body>
