@@ -31,7 +31,7 @@
     </div>
 
     <!--------------- Navbar --------------->
-    <nav class="navbar navbar-expand-lg navv">
+    <nav class="navbar navbar-expand-lg navv ">
         <div class="container">
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -187,8 +187,9 @@
                             <div class="d-flex justify-content-center align-items-center gap-2 mt-3">
                                 <a href="#" class="btn btn-shop">خرید</a>
                                 <a href="#" class="text-danger" title="افزودن به علاقه‌مندی‌ها" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal" onclick="showTab('tab2')"><i style="font-size:24px"
-                                        class="fa">&#xf08a;</i></a>
+                                    data-bs-target="#exampleModal">
+                                    <i style="font-size:24px" class="fa fa-heart-o"></i>
+                                </a>
                                 <i class="text-dark position-relative i_a" title="افزودن به سبد خرید"
                                     onclick="addToBasket(this)">
                                     <i class="fa" style="font-size:24px" id="basketIcon">&#xf291;</i>
@@ -556,27 +557,27 @@
                 </div>
 
                 <div class="modal-body">
-                    <!-- Tabs nav -->
+                    <!-- tab pane1 -->
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
-                        <li class="nav-item" role="presentation">
+                        <li class="nav-item">
                             <button class="nav-link active" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1"
-                                type="button" role="tab">سبد خرید</button>
+                                type="button">سبد خرید</button>
                         </li>
-                        <li class="nav-item" role="presentation">
+                        <li class="nav-item">
                             <button class="nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2"
                                 type="button" role="tab">مورد علاقه ها</button>
                         </li>
                     </ul>
 
-                    <!-- Tabs content -->
+                    <!-- tab pane2 -->
                     <div class="tab-content mt-3" id="myTabContent">
-                        <div class="tab-pane fade show active" id="tab1" role="tabpanel">
-                            <div id="listp"></div> <!-- This will be filled dynamically by JS -->
+                        <div class="tab-pane fade show active" id="tab1">
+                            <div id="listp"></div> <!-- js parent div -->
                             <p id="emptybas" style="display:none">سبد خرید خالی است.</p>
                         </div>
 
-                        <div class="tab-pane fade" id="tab2" role="tabpanel">
-                            <div id="favlist"></div> <!-- This will be used later for favorites -->
+                        <div class="tab-pane fade" id="tab2">
+                            <div id="favlist"></div> <!-- js parent div -->
                             <p id="emptyfav" style="display:none">مورد علاقه‌ای اضافه نشده است.</p>
                         </div>
                     </div>

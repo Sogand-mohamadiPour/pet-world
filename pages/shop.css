@@ -669,7 +669,7 @@ footer {
 }
 
 /* --------------------------modal styles--------------------- */
-/* Basket item container */
+/* Basket */
 .row_product_basket {
     display: flex;
     align-items: center;
@@ -678,7 +678,7 @@ footer {
     border-bottom: 1px solid #ddd;
 }
 
-/* Basket item image */
+/* Basket image */
 .row_product_basket img {
     width: 60px;
     height: 60px;
@@ -687,16 +687,14 @@ footer {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
-/* Basket item name and count container */
 .row_product_basket span {
     font-size: 14px;
     color: #333;
 }
 
-/* Count badge or quantity span */
+/* badge in basket */
 .quantity {
-    background-color: #6f42c1;
-    /* Bootstrap purple-ish */
+    background-color: var(--purple8);
     color: white;
     border-radius: 12px;
     padding: 2px 8px;
@@ -704,7 +702,7 @@ footer {
     margin-left: auto;
 }
 
-/* Plus button styling */
+/* Plus btn */
 .pmt_btn {
     background-color: #6f42c1;
     border: none;
@@ -714,6 +712,7 @@ footer {
     height: 26px;
     font-weight: bold;
     cursor: pointer;
+    /* font-size: 200px; */
     transition: background-color 0.2s ease;
 }
 
@@ -729,21 +728,21 @@ footer {
     margin-left: 8px;
     font-size: 18px;
 }
- 
+
 
 .pmt_btn {
-  background-color: transparent !important;
-  color: purple !important; 
-  border: none;
-  font-size: 18px;
-  cursor: pointer;
-  padding: 0 6px;
+    background-color: transparent !important;
+    color: purple !important;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 0 6px;
 }
 
 .pmt_btn:hover {
-  color: darkmagenta;
-  background-color: #f0e6f7; 
-  border-radius: 4px;
+    color: darkmagenta;
+    background-color: #f0e6f7;
+    border-radius: 4px;
 }
 
 
@@ -794,6 +793,13 @@ footer {
     .d_products {
         width: 48%;
         margin: 1%;
+    }
+
+    /* basket badge */
+    .badge_carrd {
+        position: absolute;
+        bottom: 20px;
+       
     }
 }
 

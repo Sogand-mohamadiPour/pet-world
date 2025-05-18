@@ -1,5 +1,9 @@
 // load page
 let change_b = false;
+let arr_bass = [];
+let count_product_bas = 0;
+let arr_favs = [];
+
 // ------ change theme
 function change_theme() {
     if (change_b == false) {
@@ -131,8 +135,6 @@ function showTab(tabId) {
     tab.show();
 }
 // modal basket---------------------------------------------------
-let arr_bass = [];
-let count_product_bas = 0;
 
 function addToBasket(element) {
     let cardBody = element.closest('.card-body');
@@ -169,29 +171,32 @@ function show_bas() {
     } else {
         document.getElementById("emptybas").style.display = "none";
 
-        arr_bass.forEach((item, i) => {
-            let iconHtml = '';
+        for (let i = 0; i < arr_bass.length; i++) {
+            let item = arr_bass[i];
+            let iconHtml = "";
+
             if (item.count === 1) {
                 // Trash icon when count = 1
-                iconHtml = `<i class="fa fa-trash-o" onclick="removeItem(${i})" style="cursor:pointer;"></i>`;
+                iconHtml = "<i class='fa fa-trash-o' onclick='removeItem(" + i + ")' style='cursor:pointer;'></i>";
             } else {
                 // Minus icon when count > 1
-                iconHtml = `<button class="pmt_btn" onclick="decrement(${i})">-</button>`;
+                iconHtml = "<i class='fa fa-minus' onclick='decrement(" + i + ")' style='cursor:pointer;'></i>";
             }
 
             let row = document.createElement('div');
             row.classList.add("row_product_basket");
-            row.innerHTML = `
-                <img src="${item.imgsrc}">
-                <span>${item.name}</span>
-                <button class="pmt_btn" onclick="increment(${i})">+</button>
-                <span class="quantity">${item.count}</span>
-                ${iconHtml}
-            `;
+            row.innerHTML =
+                "<img src='" + item.imgsrc + "'>" +
+                "<span>" + item.name + "</span>" +
+                "<i class='fa fa-plus' onclick='increment(" + i + ")' style='cursor:pointer;'></i>" +
+                "<span class='quantity'>" + item.count + "</span>" +
+                iconHtml;
+
             list.appendChild(row);
-        });
+        }
     }
 }
+
 
 function removeItem(index) {
     count_product_bas -= arr_bass[index].count; // Decrease total count by that item's count
@@ -227,6 +232,62 @@ function increment(index) {
     document.getElementById("counter").innerText = count_product_bas;  // Update badge text
     show_bas();
 }
+
+
+// ---------- fav pane js
+function toggleFav(element) {
+    let card = element.closest('.card');
+    let name = card.querySelector('.card-title').innerText;
+    let img = card.querySelector('img').src;
+
+    let existing = arr_favs.find(item => item.name === name);
+
+    if (existing) {
+        arr_favs = arr_favs.filter(item => item.name !== name);
+        element.style.color = ""; // back to default
+    } else {
+        arr_favs.push({ name: name, imgsrc: img });
+        element.style.color = "red";
+    }
+
+    show_favs();
+}
+
+
+function show_favs() {
+    const favList = document.getElementById('favList');
+    favList.innerHTML = '';
+
+    arr_favs.forEach((item, i) => {
+        let row = document.createElement('div');
+        row.classList.add("row_fav_item");
+        row.innerHTML = `
+            <img src="${item.imgsrc}">
+            <span>${item.name}</span>
+            <i class="fas fa-heart" onclick="removeFav(${i})" style="color:red; cursor:pointer;"></i>
+        `;
+        favList.appendChild(row);
+    });
+}
+
+function removeFav(index) {
+    let name = arr_favs[index].name;
+    arr_favs.splice(index, 1);
+
+    // Also update heart icon in product cards
+    let cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+        if (card.querySelector('.card-title').innerText === name) {
+            let icon = card.querySelector('.fa-heart');
+            icon.classList.remove('fas');
+            icon.classList.add('far');
+        }
+    });
+
+    show_favs();
+}
+
+
 
 
 
