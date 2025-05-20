@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="welcome.css">
+    <title>Welcome</title>
+</head>
+
+<body>
+    <div class="welcome-box">
+        <h1>خوش آمدید!</h1>
+        <p id="user-name"></p>
+        <p id="user-phone"></p>
+        <button class="btn-logout" onclick="logout()">خروج</button>
+    </div>
+
+    <script>
+        const name = localStorage.getItem("username");
+        const family = localStorage.getItem("userfamily");
+        const mobile = localStorage.getItem("usermobile");
+
+        if (name && family && mobile) {
+            document.getElementById("user-name").textContent = `سلام ${name} ${family} عزیز`;
+            document.getElementById("user-phone").textContent = `شماره شما: ${mobile}`;
+        } else {
+            document.getElementById("user-name").textContent = "کاربری یافت نشد!";
+            document.getElementById("user-phone").style.display = "none";
+        }
+
+        function logout() {
+            localStorage.clear();
+            window.location.href = "login.html"; // یا نام صفحه ورود شما
+        }
+    </script>
+</body>
+
+</html>

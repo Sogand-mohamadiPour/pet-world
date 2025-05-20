@@ -76,6 +76,8 @@ function check_pass(e) {
 
 // btn check
 function result(e) {
+    e.preventDefault(); 
+
     let na = document.getElementById("txt_name").value;
     let fa = document.getElementById("txt_lname").value;
     let mob = document.getElementById("txt_num").value;
@@ -83,6 +85,7 @@ function result(e) {
     let repass = document.getElementById("txt_repass").value;
 
     let bn = bf = bm = bp = false;
+
 
     if (na.length < 2) {
         document.querySelectorAll(".input")[0].style.borderColor = "red";
@@ -123,12 +126,17 @@ function result(e) {
         bp = true;
     }
 
-    if (bn && bf && bm && bp) {
-        let obj;
-        obj = { name: na, family: fa, mobile: mob, password: pass, };
-        console.log(obj);
+        if (bn && bf && bm && bp) {
+        // Save data in localStorage
+        localStorage.setItem("username", na);
+        localStorage.setItem("userfamily", fa);
+        localStorage.setItem("usermobile", mob);
+
+        // Redirect to welcome page
+        window.location.href = "welcome.html";
     }
 }
+
 
 
 function togglePassword() {

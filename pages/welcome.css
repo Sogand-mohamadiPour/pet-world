@@ -1,0 +1,49 @@
+body {
+      margin: 0;
+      font-family: 'Vazirmatn', sans-serif;
+      background: linear-gradient(135deg, #e0d4f7, #f6edff);
+      color: #3a2b58;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      direction: rtl;
+    }
+
+    .welcome-box {
+      background-color: #fff;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 8px 20px rgba(146, 123, 204, 0.2);
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #7e57c2;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin: 10px 0;
+      color: #4a4a4a;
+    }
+
+    .btn-logout {
+      margin-top: 30px;
+      padding: 10px 20px;
+      border: none;
+      background-color: #b39ddb;
+      color: white;
+      font-size: 1em;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-logout:hover {
+      background-color: #9575cd;
+    }

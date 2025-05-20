@@ -3,6 +3,7 @@ let change_b = false;
 let arr_bass = [];
 let count_product_bas = 0;
 let arr_favs = [];
+let fav_arr = [];
 
 // ------ change theme
 function change_theme() {
@@ -235,57 +236,74 @@ function increment(index) {
 
 
 // ---------- fav pane js
+
+
 function toggleFav(element) {
-    let card = element.closest('.card');
-    let name = card.querySelector('.card-title').innerText;
-    let img = card.querySelector('img').src;
+    let icon = element.querySelector("i");
+    let card = element.closest(".card");
+    let name = card.querySelector(".card-title").innerText;
+    let img = card.querySelector("img").src;
 
-    let existing = arr_favs.find(item => item.name === name);
+    let index = fav_arr.findIndex(item => item.name === name);
 
-    if (existing) {
-        arr_favs = arr_favs.filter(item => item.name !== name);
-        element.style.color = ""; // back to default
+    if (index === -1) {
+        // Add to favorites
+        fav_arr.push({ name: name, imgsrc: img });
+        icon.classList.remove("fa-heart-o");
+        icon.classList.add("fa-heart");
+        icon.style.color = "red";
     } else {
-        arr_favs.push({ name: name, imgsrc: img });
-        element.style.color = "red";
+        // Remove from favorites
+        fav_arr.splice(index, 1);
+        icon.classList.remove("fa-heart");
+        icon.classList.add("fa-heart-o");
+        icon.style.color = "";
     }
 
-    show_favs();
+    showFav();
 }
 
-
-function show_favs() {
-    const favList = document.getElementById('favList');
+function showFav() {
+    let favList = document.getElementById("favList");
     favList.innerHTML = '';
 
-    arr_favs.forEach((item, i) => {
-        let row = document.createElement('div');
-        row.classList.add("row_fav_item");
-        row.innerHTML = `
-            <img src="${item.imgsrc}">
-            <span>${item.name}</span>
-            <i class="fas fa-heart" onclick="removeFav(${i})" style="color:red; cursor:pointer;"></i>
-        `;
-        favList.appendChild(row);
-    });
+    if (fav_arr.length === 0) {
+        document.getElementById("emptyFav").style.display = "block";
+    } else {
+        document.getElementById("emptyFav").style.display = "none";
+
+        fav_arr.forEach((item, i) => {
+            let row = document.createElement("div");
+            row.classList.add("row_product_basket");
+            row.innerHTML = `
+                <img src="${item.imgsrc}">
+                <span>${item.name}</span>
+                <i class="fa fa-heart" style="color:red; cursor:pointer;" onclick="removeFav(${i})"></i>
+            `;
+            favList.appendChild(row);
+        });
+    }
 }
 
 function removeFav(index) {
-    let name = arr_favs[index].name;
-    arr_favs.splice(index, 1);
+    const removedItem = fav_arr[index];
+    fav_arr.splice(index, 1);
+    showFav();
 
-    // Also update heart icon in product cards
-    let cards = document.querySelectorAll('.card');
-    cards.forEach(card => {
-        if (card.querySelector('.card-title').innerText === name) {
-            let icon = card.querySelector('.fa-heart');
-            icon.classList.remove('fas');
-            icon.classList.add('far');
+    // Find the corresponding heart icon in the cards and reset it
+    const allHearts = document.querySelectorAll('.card .fa');
+    allHearts.forEach(icon => {
+        const card = icon.closest('.card');
+        const name = card.querySelector('.card-title').innerText;
+
+        if (name === removedItem.name && icon.classList.contains('fa-heart')) {
+            icon.classList.remove('fa-heart');
+            icon.classList.add('fa-heart-o');
+            icon.style.color = "";
         }
     });
-
-    show_favs();
 }
+
 
 
 
