@@ -46,7 +46,8 @@ body {
     cursor: pointer;
     z-index: 1000;
   }
-  
+
+  /* --------chat box mobile---------- */
   .chat-icon {
     position: fixed;
     bottom: 20px;
@@ -94,10 +95,6 @@ body {
     font-family: sahel;
     font-size: 1.2rem;
 }
-
-/* .navv{
-    color: white;
-} */
 
 .img {
     width: 50px;
@@ -156,7 +153,7 @@ body {
 }
 
 
-/* offvanvas */
+/* -------------------mobile offcanvas menu------------------ */
 .offcanvas {
     color: black;
     transition: transform 0.4s ease, background-color 0.4s ease;
@@ -212,7 +209,7 @@ body {
     background-color: var(--purple1) !important;
 }
 
-/* ----------menu_desktop-------- */
+/* ----------menu_desktop--------- */
 .menu_desktop {
     border: 1px solid black;
     border-radius: 7px;
@@ -247,7 +244,7 @@ body {
     width: 48px;
 }
 
-/* slider */
+/* --------------------------js slider---------------------------- */
 #slider {
     width: 100%;
     max-height: 400px;
@@ -290,11 +287,9 @@ body {
 .slider-buttons button:hover {
     background-color: rgba(255, 255, 255, 0.9);
 }
+/* --------- end slider ------------ */
 
-
-
-/* --------------------- */
-/* Card Section */
+/* ------------------cards---------------- */
 .d1 {
     display: flex;
     flex-wrap: wrap;
@@ -367,8 +362,10 @@ a.category-link:hover .circle-placeholder {
     height: 100%;
     object-fit: cover;
 }
+/* --------------end------------------ */
 
-/* -------------------------------- */
+
+/* -------------------- رزرو و ساعات کاری ----------------------- */
 .asli {
     border: 1px solid purple;
 }
@@ -443,8 +440,6 @@ a.category-link:hover .circle-placeholder {
 }
 
 /* ----------- تبلیغ قروشگاه  ------------------ */
-
-/* Original styles */
 .egg {
     color: purple;
 }
@@ -477,8 +472,8 @@ a.category-link:hover .circle-placeholder {
     margin-top: 15px;
 }
 
-/* *********************اکانت پت******************* */
 
+/* ------------------------- اکانت پت --------------------- */
 .pet_account {
     background-color: var(--purple3);
     display: flex;
@@ -547,7 +542,7 @@ a.category-link:hover .circle-placeholder {
 }
 
 
-/* --------------نظر ها ------------- */
+/* -------------- اسلایدر نظر ها ------------- */
 .comments {
     background-image: url(assets/pic/animal.jpg);
     background-size: cover;
@@ -577,7 +572,7 @@ a.category-link:hover .circle-placeholder {
     border-radius: 50px;
 }
 
-/* banner */
+/* ------------------- بنر ----------------------- */
 .banner {
     width: 98%;
     margin: auto;
@@ -603,10 +598,8 @@ a.category-link:hover .circle-placeholder {
     color: #8e44ad !important;
 }
 
-
-/* footer */
+/* ------------------ فوتر ------------------ */
 footer {
-    /* border-top: 5px solid #6822e944; */
     background: #e5c7fa;
     overflow-x: hidden;
     color: black !important;
@@ -648,9 +641,9 @@ footer {
 
 
 
-
-/* Responsive Design */
+/* -----------------Responsive Design----------------- */
 @media (max-width: 991px) {
+    /* navbar */
     .navbar {
         height: auto;
     }
@@ -680,11 +673,6 @@ footer {
         display: none;
     }
 
-    /* slider */
-    /* .slider {
-        height: 320px;
-    } */
-
     /* cards */
     .card-container {
         display: flex;
@@ -699,10 +687,10 @@ footer {
     .d_food_img {
         width: 30%;
     }
-
 }
 
 @media (max-width: 768px) {
+    /* navbar */
     .navbar .container {
         flex-wrap: nowrap;
     }
@@ -719,11 +707,6 @@ footer {
         font-size: 32px;
     }
 
-    /* slider */
-    /* .slider {
-        height: 200px;
-    } */
-
     /* cards */
     .d2 {
         width: 100%;
@@ -735,7 +718,7 @@ footer {
         width: 100%;
     }
 
-    /* اکانت پت */
+    /* pet account */
     .account_wrapper {
         flex-direction: column;
     }
@@ -763,10 +746,6 @@ footer {
   }  
 
 @media (max-width: 550px) {
-    /* slider */
-    /* .slider {
-        height: 200px;
-    } */
 
     /* shop ads */
     .d_food_img {
@@ -776,12 +755,7 @@ footer {
 
 
 @media (max-width: 480px) {
-
-    /* slider */
-    /* .slider {
-        height: 180px;
-    } */
-
+    
     .img {
         width: 40px;
         height: 40px;
