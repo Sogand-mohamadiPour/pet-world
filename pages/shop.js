@@ -130,6 +130,7 @@ pet_options.forEach(option => {
 });
 
 // tab js --------------------------------------------------------
+// ba click bar roy har tab ja be ja beshe
 function showTab(tabId) {
     const triggerEl = document.querySelector(`[data-bs-target="#${tabId}"]`);
     const tab = new bootstrap.Tab(triggerEl);
@@ -290,7 +291,7 @@ function removeFav(index) {
     fav_arr.splice(index, 1);
     showFav();
 
-    // Find the corresponding heart icon in the cards and reset it
+    // Find the correct heart icon in the cards and reset it
     const allHearts = document.querySelectorAll('.card .fa');
     allHearts.forEach(icon => {
         const card = icon.closest('.card');

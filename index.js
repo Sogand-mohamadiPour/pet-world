@@ -57,7 +57,7 @@ window.addEventListener("load", () => {
   }, 5000); // show 5 sec after load
 });
 
-// slider----------------------------------------------------------
+// ------------------------slider
 let arr = ['slider1.jpeg', 'slider222.jpg', 'slider3.png'];
 let i = 0;
 
@@ -67,7 +67,7 @@ const prev = () => {
 }
 
 const next = () => {
-  i = (i + 1) % arr.length; // forward
+  i = (i + 1) % arr.length; // next
   document.getElementById('slider-img').src = 'assets/pic/' + arr[i];
 }
 

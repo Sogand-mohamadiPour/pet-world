@@ -36,7 +36,7 @@ body {
     background-image: url(../assets/pic/bg.jpg);
 }
 
-/* -----------[navbar]------------- */
+/* ----------- navbar ------------- */
 .navbar {
     background-color: var(--purple9);
     height: 90px;
@@ -426,7 +426,7 @@ span {
 }
 
 
-
+/* responsive design */
 
 @media (max-width: 1000px) {
     #form {
