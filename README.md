@@ -55,7 +55,7 @@ This project is built with **HTML**, **CSS**, **JavaScript**, and **Bootstrap**,
 
 ## 👤 Author
 
-[Your Name](https://github.com/Sogand-mohamadiPour)
+[Sogand](https://github.com/Sogand-mohamadiPour)
 
 ---
 
